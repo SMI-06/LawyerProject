@@ -1,0 +1,46 @@
+CREATE Table Contact_us(
+id int PRIMARY KEY AUTO_INCREMENT,
+Name varchar(50),
+Email varchar(50),
+Phone_no varchar(15),
+Message text    
+
+
+)
+
+CREATE TABLE users(
+id int PRIMARY KEY AUTO_INCREMENT,
+username varchar(50)  UNIQUE NOT NULL,
+email   varchar(50)   UNIQUE NOT NULL,
+`password` varchar(50) NOT NULL,    
+user_role varchar(50) NOT NULL,
+created_date timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+image text NOT NULL,
+first_name varchar(50) NOT NULL,
+last_name varchar(50) NOT NULL,
+gender varchar(25) NOT NULL,
+dob varchar(255) NOT NULL,
+cnic varchar(13) NOT NULL,
+country varchar(50) NOT NULL,
+nationality varchar(50) NOT NULL,
+city varchar (50) NOT NULL,
+address text NOT NULL,
+mobile_number varchar(13) NOT NULL,
+highest_qualification varchar(100) NOT NULL,
+specialization varchar(100) NOT NULL,
+current_status varchar(100) NOT NULL,
+future_plan varchar(50) NOT NULL,
+employment_status varchar(50) NOT NULL,
+experience_level varchar(50) NOT NULL,
+job_city varchar(50) NOT NULL,
+salary_income varchar(50) NOT NULL,
+`status` tinyint NOT NULL   
+
+)
+
+CREATE table practice_areas(
+id int PRIMARY KEY AUTO_INCREMENT,
+name varchar(50),    
+icon varchar(50),
+description text    
+)
